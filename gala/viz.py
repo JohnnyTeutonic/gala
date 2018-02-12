@@ -96,7 +96,7 @@ def show_multiple_images(*images, axes=None, image_type='raw'):
         The image shown.
     """
     if image_type not in ["raw", "rand", "gray", "grey", "magma"]:
-        raise ValueError("""image_type only understands 'raw', 'rand','gray',
+        raise ValueError("""'image_type' only understands 'raw', 'rand','gray',
                          """
                          """'grey', or 'magma'. 'You entered '{}'"""
                          .format(image_type))
