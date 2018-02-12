@@ -96,9 +96,10 @@ def show_multiple_images(*images, axes=None, image_type='raw'):
         The image shown.
     """
     if image_type not in ["raw", "rand", "gray", "grey", "magma"]:
-        raise LookupError("image_type only understands 'raw', 'rand', \
-                          'gray', 'grey' or 'magma'. You entered '{}'.".
-                          format(image_type))
+        raise ValueError("""image_type only understands 'raw', 'rand','gray',
+                         """
+                         """'grey', or 'magma'. 'You entered '{}'"""
+                         .format(image_type))
     number_of_im = len(images)
     figure = plt.figure()
     for i in range(number_of_im):
