@@ -9,7 +9,8 @@ from math import ceil
 # VISUALIZATION FUNCTIONS #
 ###########################
 
-def imshow_grey(im, axis=None):
+
+def imshow_grey(im, axis=None, **kwargs):
     """Show a segmentation using a gray colormap.
 
     Parameters
@@ -27,7 +28,7 @@ def imshow_grey(im, axis=None):
     return axis.imshow(im, cmap='gray')
 
 
-def imshow_magma(im, axis=None):
+def imshow_magma(im, axis=None, **kwargs):
     """Show a segmentation using a magma colormap.
 
     Parameters
@@ -45,7 +46,7 @@ def imshow_magma(im, axis=None):
     return axis.imshow(im, cmap='magma')
 
 
-def imshow_rand(im, axis=None, labrandom=True):
+def imshow_rand(im, axis=None, labrandom=True, **kwargs):
     """Show a segmentation using a random colormap.
 
     Parameters
@@ -75,7 +76,7 @@ def imshow_rand(im, axis=None, labrandom=True):
     return axis.imshow(im, cmap=rcmap)
 
 
-def show_multiple_images(*images, axes=None, image_type='raw'):
+def show_multiple_images(*images, axes=None, image_type='raw', **kwargs):
     """Returns a figure with subplots containing multiple images.
 
     Parameters
